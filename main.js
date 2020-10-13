@@ -6,13 +6,13 @@
 
 // Utente inserisce Km da percorrere
 var distance = parseInt(prompt("inserisci la distanza in Km per dove vuoi andare"));
-while (isNaN(distance)) {
+while (isNaN(distance) || distance <= 0) {
     distance = parseInt(prompt("Il dato inserito non é valido inserire di nuovo la distanza in Km"));
 }
 
 // Utente inserisce etá
 var age = parseInt(prompt("Inserisci la tua etá"));
-while (isNaN(age)) {
+while (isNaN(age) || age <= 0) {
     age = parseInt(prompt("Il dato inserito non é valido inserire di nuovo la tua etá"));
 }
 
