@@ -18,14 +18,14 @@ while (isNaN(age)) {
 
 // calcolo e comunicazione dei prezzi in funzione dell'etá dell'utente e della distanza
 var cost = distance * 0.21;
-console.log("Il costo del biglietto é: " + cost + "€");
+document.getElementById('prezzo-no-sconto').innerHTML = cost
 
 if (age < 18) {
     cost = cost - (cost * 0.2);
     cost = Math.round(cost * 100) / 100;
-    console.log("Ma per te é: " + cost + "€");
+    document.getElementById('prezzo-sconto').innerHTML = "Ma per te é: " + cost + "€"
 } else if (age > 65) {
     cost = cost - (cost * 0.4);
     cost = Math.round(cost * 100) / 100;
-    console.log("Ma per te é: " + cost + "€");
+    document.getElementById('prezzo-sconto').innerHTML = "Ma per te é: " + cost + "€";
 }

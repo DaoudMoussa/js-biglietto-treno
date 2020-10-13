@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-image: url("https://media.istockphoto.com/photos/train-rail-way-with-sunlight-background-process-on-vintage-picture-id507425050");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.text-box {
+    background: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+}
+
+.text-box p {
+    color: white;
+    font-size: 27px;
+    line-height: 3;
+}
+
+.text-box span:last-child {
+    font-weight: bold;
+    font-size: 30px;
+}
