@@ -3,7 +3,8 @@
 // il prezzo del biglietto dipende dalla distanza da percorrere e costa € 0.21 / km
 // è previsto uno sconto del 20% per il minorenni
 // gli over 65 hanno diritto ad uno sconto del 40%
-
+const scontoMinorenni = 0.2;
+const scontoAnziani = 0.4;
 // Utente inserisce Km da percorrere
 var distance = parseInt(prompt("inserisci la distanza in Km per dove vuoi andare"));
 while (isNaN(distance) || distance <= 0) {
@@ -21,11 +22,11 @@ var cost = distance * 0.21;
 document.getElementById('prezzo-no-sconto').innerHTML = cost
 
 if (age < 18) {
-    cost = cost - (cost * 0.2);
-    cost = Math.round(cost * 100) / 100;
-    document.getElementById('prezzo-sconto').innerHTML = "Ma per te é: " + cost + "€"
+    cost = cost - (cost * scontoMinorenni);
+    cost = cost.toFixed(2);
+    document.getElementById('prezzo-sconto').innerHTML = "Ma solo per te: " + cost + "€"
 } else if (age > 65) {
-    cost = cost - (cost * 0.4);
-    cost = Math.round(cost * 100) / 100;
-    document.getElementById('prezzo-sconto').innerHTML = "Ma per te é: " + cost + "€";
+    cost = cost - (cost * scontoAnziani);
+    cost = cost.toFixed(2);
+    document.getElementById('prezzo-sconto').innerHTML = "Ma solo per te: " + cost + "€";
 }
